@@ -9,6 +9,8 @@ button.addEventListener('click', function(){
     const userPasswordField = document.getElementById('user-password');
     const userPassword = userPasswordField.value;
 
+    userEmailField.value = '';
+    
     if(userEmail === 'admin@gmail.com' && userPassword === 'admin1234'){
         location.href = "bank-page.html";
     }else{
