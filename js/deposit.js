@@ -6,6 +6,14 @@ depositButton.addEventListener('click', function(){
     const depositFiledstring = depositFiledElement.value;
     const depositField = parseFloat(depositFiledstring);
 
+    //step-7 : reset the vlaue after input
+    depositFiledElement.value = '';
+
+    if(isNaN(depositField)){
+        alert('Please enter a amount');
+        return;
+    }
+
     //step-3 : get the current deposit total
     const currentDepositAmout = document.getElementById('deposit-amount');
     const depositAmountString = currentDepositAmout.innerText;
@@ -22,8 +30,5 @@ depositButton.addEventListener('click', function(){
     const totalAmount = totalAmountValue + depositField;
 
     totalamount.innerText = totalAmount;
-
-    //step-7 : reset the vlaue after input
-    depositFiledElement.value = '';
 
 })
